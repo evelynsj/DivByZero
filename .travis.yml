@@ -5,7 +5,7 @@ addons:
   sonarcloud:
     organization: "exxxsj-github"
     token:
-      secure: "f0e6325525c2e8405e1f8224e955980b5a1c30f8"
+      secure: "haZkW9iSxnjok8b6P0AKC1gG20WHvGxAd3YgRmhRe/wJl97Q0G9d9eOCx3CTsHZLfRaagI9uQa+byUyxtD3jelfKprjbvZj7+uE35/HhUpKIoJQPsBetLKSYb6GP1jx7Ve5b+izEfZOPjMjceSSRegX6x4mP1GIHgSlSS2Iu5x9yWsUXoX3byleYgUSiAWJkyzn/p/91pYKR8fxrt0oO4/XPChNto4i1abyVBhjhByrgT3XL0uDO8tBBBRS9ILzBwMPedS0aCNZ0CAVDTp5YiS+Ooj3VBSLJv6kLLxIM0ygE4QdVEMzWXmZvQQ8KC3QDhZCS8g6XJ4L1bKzjWR11mQyTMAuIYwz+q1/SzbWQKpOhMLHrgLm9uiUL2YTUYUSgQwk9K/NhG5Io6x0akm2uTK31rpJEEpm43/6v6PgJv3TqXcRpx4YTwu1G7lMYs6tHU5ucf57SNTRqIaa9xgigbopPhBmmBKRtyjt0MYa98GOUxQ7wdImhMgMR0G4rUUcWWkHnUkoLhIYV4XD2NSFRWzmT+xvMqIjfs1X/3zFIVr0w6lLv+NTqmA5LrbSRvf+nwlrXVKYdf+o+1gxdoeZZvgAMFsq2rt2ubUuwoHxHQLkW0E5Bhkom2OHshduj1lDYejTBiQvwL9zNGuZJHA7lKbsUFDi4NlGtp7CqCwUM76Y="
 script:
   - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   - sonar-scanner
