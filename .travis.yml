@@ -5,7 +5,20 @@ addons:
   sonarcloud:
     organization: "exxxsj-github"
     token:
-      secure: "luoAgMK0RnGLzmrjsfDi7uwoSduRmy9wZeMgt20NdF5OZnltPaYhDo6zGw9xVzpnPfDsFFlUe1Tab76wSqvkXxLzlFzLypJnYc05lBxQCrmnDYXVuyJL86+wqMECEtjBi7i2kRt0rCO6T+uvPLByI8vcP5Oi0F+GjAA5Jjrs6FHPcu+G/MnZQw2y3Oa7MljeNL+gB9IonI5XbjzSsVO4I3jFZjwHkMzaB7UCD+7r3PrFkDYea/J1lCoGY5Cx5QZu8SDYSkyUKLRy1oXlOTPrgSUriLx8yjXGE8OYqoVcjVIZCeQ6NQb9O25AzGGISgPdyVuLP+2u/Ya7bsnFxJXj0g80Urx9iHCW4gp6dv4wQshTkFhSISBK2G7Jlbdo8+uJXCJLIRpo34/SZierVYPa+COlqSTk3e9dQXAKw4PeMyN9kHqt+Zs9BsvQuBwVhdzx9oN23KDVC/g5vWZszYagyJ07ThoXTotEY7hnHyOjpaluHsO4ucHEa8/BslSkJkG6HvqcGymQN4cYZvTSNcYzhkYFMgXJk6RKnSZuYTRGexIeh/ZaQI1R1bSE6Hepaoon+w8nxtMjHU4iw5bcd4Teml9eHmLuHWd7EapLpANaXwLmizc/DOV8S4geKz7QCekcdRPCGX8syaP3xLFXI0AzmO0DUp9RsuD61FnzvZXmNSs="
+      secure: "dist: trusty
+sudo: required
+
+addons:
+  sonarcloud:
+    organization: "exxxsj-github"
+    token:
+      secure: "f0e6325525c2e8405e1f8224e955980b5a1c30f8"
+script:
+  - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
+  - sonar-scanner
+cache:
+  directories:
+    - '$HOME/.sonar/cache'"
 script:
   - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   - sonar-scanner
