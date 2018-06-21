@@ -5,20 +5,7 @@ addons:
   sonarcloud:
     organization: "exxxsj-github"
     token:
-      secure: "dist: trusty
-sudo: required
-
-addons:
-  sonarcloud:
-    organization: "exxxsj-github"
-    token:
       secure: "f0e6325525c2e8405e1f8224e955980b5a1c30f8"
-script:
-  - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
-  - sonar-scanner
-cache:
-  directories:
-    - '$HOME/.sonar/cache'"
 script:
   - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   - sonar-scanner
